@@ -37,3 +37,9 @@ class Block{
             + JSON.stringify(this.data)).toString();
     }
 }
+
+let fakeCoin = new Blockchain();
+fakeCoin.addBlock(new Block(1, "28/07/2021", "The first input"));
+fakeCoin.addBlock(new Block(2, "28/07/2021", "The second input"));
+
+console.log(JSON.stringify(fakeCoin, null, 4));
