@@ -24,7 +24,7 @@ class Blockchain{
 }
 
 class Block{
-    constructor(index, timestamp, data, prevHash) {
+    constructor(index, timestamp, data, prevHash = '') {
         this.index = index;
         this.timestamp = timestamp;
         this.data = data;
@@ -39,7 +39,7 @@ class Block{
 }
 
 let fakeCoin = new Blockchain();
-fakeCoin.addBlock(new Block(1, "28/07/2021", "The first input"));
-fakeCoin.addBlock(new Block(2, "28/07/2021", "The second input"));
+fakeCoin.addBlock(new Block(1, "28/07/2021", {amount: 3, from: 0, to:3}));
+fakeCoin.addBlock(new Block(2, "28/07/2021", {amount: 4, from: 3, to:7}));
 
 console.log(JSON.stringify(fakeCoin, null, 4));
