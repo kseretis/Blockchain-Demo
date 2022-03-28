@@ -6,7 +6,7 @@ class Blockchain{
         this.chain = [this.createGenesisBlock()];
 
     }
-    
+    //Testing repo
     createGenesisBlock(){
         return new Block(0, "28/7/2021", "Genesis Block", "0");
     }
